@@ -13,7 +13,7 @@ export const ImageCropper = ({ image, onCropDone, onCropCancel }) => {
 
   return (
     <div className="relative">
-      <div className="w-[320px] h-[160px]">
+      <div className="w-[940px] h-[460px]">
         <Cropper
           image={image}
           aspect={aspectRatio}
@@ -25,13 +25,13 @@ export const ImageCropper = ({ image, onCropDone, onCropCancel }) => {
           style={{
             containerStyle: {
               width: '100%',
-              height: '60%',
+              height: '90%',
               backgroundColor: '#fff',
             },
           }}
         />
       </div>
-      <div className="absolute bottom-0 right-0">
+      <div className=" bottom-0 right-0">
         <button onClick={onCropCancel}>Cancel</button>
         <button onClick={() => onCropDone(croppedArea)}>Crop</button>
       </div>
